@@ -1,0 +1,10 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "apimento",
+    "password": "1234",
+    "database": "apimento",
+    "entities": ["src/mysql/**/**/*.entity{.ts,.js}"],
+    "synchronize": true
+  }
