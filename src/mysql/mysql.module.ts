@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { AppInfoModule } from './app_info/app-info.module';
+import { InfoModule } from './info/info.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), AppInfoModule],
+  imports: [TypeOrmModule.forRoot(), InfoModule ],
 })
-export class Mysql {
-  constructor(private connection: Connection) {}
+export class MysqlModule {
+  constructor(private readonly connection: Connection) {}
 }
 
 

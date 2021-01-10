@@ -1,13 +1,10 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-
-@Entity()
-export class AppInfo {
+@Entity("info")
+export class Info {
     @PrimaryGeneratedColumn()
     no: number;
 
-    @Column()
-    app_name: string;
+    @Column({ length: 50, nullable: true })
+    name: string;
 }
-
-
