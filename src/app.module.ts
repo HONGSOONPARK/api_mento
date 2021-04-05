@@ -1,13 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ApiModule } from './api/api.module';
-import { MysqlModule } from './mysql/mysql.module';
+import { ApiModule } from './database/api/module/api.module';
+import { DatabaseModule } from './database/database.module';
 import { Connection } from 'typeorm';
-import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [ApiModule, MysqlModule],
+  imports: [ApiModule, DatabaseModule],
   controllers: [AppController],
   providers: [AppService],
 })

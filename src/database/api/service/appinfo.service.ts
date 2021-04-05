@@ -1,18 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Info } from './entities/info.entity';
+import { AppInfo } from '../entities/appinfo.entity';
 
 
 @Injectable()
-export class InfoService {
+export class AppInfoService {
 
     constructor(
-        @InjectRepository(Info)
-        private infoRepository: Repository<Info>,
+        @InjectRepository(AppInfo)
+        private infoRepository: Repository<AppInfo>,
       ) {}
     
-      findAll(): Promise<Info[]> {
+      findAll(): Promise<AppInfo[]> {
         return this.infoRepository.find();
       }
 

@@ -1,11 +1,14 @@
 {
     "type": "mysql",
-    "host": "localhost",
+    "host": "rasb",
     "port": 3306,
     "username": "apimento",
     "password": "1234",
     "database": "apimento",
     "entities": ["dist/**/*.entity{.ts,.js}"],
-    "synchronize": false,
+    "synchronize": true,
     "autoLoadEntities": true
+
   }
+
+  

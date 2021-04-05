@@ -4,8 +4,8 @@ export class ApiService {
 
     private appInfo:string;
 
-    getAppInfo(): string {
-        return this.appInfo;
+    getRoot(): string {
+        return 'API Server Main';
     }
 
 
