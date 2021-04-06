@@ -6,29 +6,35 @@ export class AppInfo {
     no: number;
 
     @Column({ length: 100, nullable: true })
-    aos_package: string;
+    package: string;
 
     @Column({ length: 100, nullable: true })
-    aos_app_name: string;
+    appName: string;
+
+    // @Column({ length: 100, nullable: true })
+    // aos_package: string;
+
+    // @Column({ length: 100, nullable: true })
+    // aos_app_name: string;
 
     @Column({ length: 10, nullable: true, default: '0.0.0' })
-    aos_min_version: string;
+    aosMinVersion: string;
 
     @Column({ length: 10, nullable: true, default: '0.0.0' })
-    aos_market_version: string;
+    aosMarketVersion: string;
 
-    @Column({ length: 100, nullable: true })
-    ios_package: string;
+    // @Column({ length: 100, nullable: true })
+    // ios_package: string;
 
-    @Column({ length: 100, nullable: true })
-    ios_app_name: string;
-
-    @Column({ length: 10, nullable: true, default: '0.0.0' })
-    ios_min_version: string;
+    // @Column({ length: 100, nullable: true })
+    // ios_app_name: string;
 
     @Column({ length: 10, nullable: true, default: '0.0.0' })
-    ios_market_version: string;
+    iosMinVersion: string;
+
+    @Column({ length: 10, nullable: true, default: '0.0.0' })
+    iosMarketVersion: string;
 
     @Column({ type: 'timestamp', nullable: false })
-    update_date: Date;
+    updateDate: Date;
 }

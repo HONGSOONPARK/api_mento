@@ -6,8 +6,8 @@
     "password": "1234",
     "database": "apimento",
     "entities": ["dist/**/*.entity{.ts,.js}"],
-    "synchronize": true,
-    "autoLoadEntities": true
+    "synchronize": false,
+    "autoLoadEntities": false
 
   }
 

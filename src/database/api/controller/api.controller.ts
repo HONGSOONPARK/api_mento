@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { AppInfo } from '../entities/appinfo.entity';
 import { ApiService } from '../service/api.service';
 import { AppInfoService } from '../service/appinfo.service';
@@ -15,11 +15,20 @@ export class ApiController {
         return this.apiService.getRoot();
     }
 
-    // 앱 정보 
-    @Get('get/appinfo')
-    getInfo(): Promise<AppInfo[]> {
+    // 앱 정보 전부 조회
+    @Get('/appinfo/all')
+    appInfoAll(): Promise<AppInfo[]> {
       return this.appInfoService.findAll();
     }
+
+    // 앱 정보 
+    @Get('/appinfo/get/:name')
+    appInfoOne(@Param('name') appName: string): Promise<AppInfo> {
+      return this.appInfoService.findAppName(appName);
+    }
+
+
+    
 
 
 

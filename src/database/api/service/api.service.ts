@@ -5,7 +5,7 @@ export class ApiService {
     private appInfo:string;
 
     getRoot(): string {
-        return 'API Server Main';
+        return 'API';
     }
 
 
