@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity("MOBILE_APP_INFO")
+@Entity("APP_INFO")
 export class AppInfo {
     @PrimaryGeneratedColumn()
     no: number;
