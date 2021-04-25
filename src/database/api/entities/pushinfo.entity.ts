@@ -5,7 +5,7 @@ export class PushInfo {
     // @PrimaryGeneratedColumn()
     // no: number;
 
-    @PrimaryColumn({length:100})
+    @PrimaryColumn({length:180})
     fcmToken: string;
 
     @Column({ length: 100, nullable: true, default: '0' })
