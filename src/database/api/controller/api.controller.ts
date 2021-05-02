@@ -67,4 +67,16 @@ export class ApiController {
       }
     }
 
+
+    // 카카오톡 로그인 콜백
+    @Get('/kakao/login')
+    async kakaoLogin() : Promise<Response>{
+      console.log('kakao call back');
+      try{
+        return new ResponseMessage().success().body("test").build();
+      } catch (err){
+        Logger.error(err);
+      }
+    }
+
 }
