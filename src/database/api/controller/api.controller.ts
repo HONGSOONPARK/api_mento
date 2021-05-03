@@ -89,6 +89,21 @@ export class ApiController {
       }
     }
 
+
+    // 메인 알고리즘 특정
+    @Get('/main/algorithm/g/:code')
+    async mainAlgorithmOne(@Param('code') code: string): Promise<Response> {
+      console.log("mainAlgorithmOne code ::" +code);
+      try{
+        const algoInfo:AlgorithmDto = await this.algorithmService.findAlgorithm(code);  
+        // return new ResponseMessage().error(999, "Error").build();
+        return new ResponseMessage().success().body(algoInfo).build();
+      } catch (err){
+        Logger.error(err);
+        return new ResponseMessage().error(999, "Error").build();
+      }
+    }
+
     // 메인 배너 전체
     @Get('/main/banner/a')
     async mainBanner() : Promise<Response>{
@@ -115,7 +130,7 @@ export class ApiController {
       }
     }
 
-    // 메인 알고리즘 (회원 아이디와 연결 필요)
+    // 메인 공지
     @Get('/main/notice/a')
     async mainNotice() : Promise<Response>{
       console.log('mainNtice all');
@@ -127,7 +142,7 @@ export class ApiController {
       }
     }
 
-    // 메인 배너 특정
+    // 메인 공지 특정
     @Get('/main/notice/g/:no')
     async mainNoticeOne(@Param('no') no: number): Promise<Response> {
       console.log("mainNoticeOne no ::" +no);
