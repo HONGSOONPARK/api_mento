@@ -21,8 +21,8 @@ export class AppInfoService {
       }
 
       async findAppName(name: string): Promise<AppInfoDto> {
-        const appInfo = await this.appInfoRepository.findOne({appName:name});
-        console.log('findAppName : find ::'+name+ " :: result ==> {"+appInfo.appName+"}");
+        const appInfo = await this.appInfoRepository.findOne({app_name:name});
+        console.log('findAppName : find ::'+name+ " :: result ==> {"+appInfo.app_name+"}");
         return appInfo;
       }
 

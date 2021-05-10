@@ -2,29 +2,32 @@ import { IsByteLength, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class AppInfoDto{
     @IsNumber()
-    readonly no: number;
+    readonly seq: number;
 
     @IsString()
-    readonly package: string;
+    readonly app_name: string;
 
     @IsString()
-    readonly appName: string;
+    readonly aos_package: string;
+    
+    @IsString()
+    readonly ios_package: string;
 
     @IsString()
     @IsByteLength(10)
-    readonly aosMinVersion: string;
+    readonly aos_min_version: string;
 
     @IsString()
-    readonly aosMarketVersion: string;
+    readonly aos_market_version: string;
 
     @IsString()
-    readonly iosMinVersion: string;
+    readonly ios_min_version: string;
 
     @IsString()
-    readonly iosMarketVersion: string;
+    readonly ios_market_version: string;
 
     @IsString()
-    readonly updateDate: Date;
+    readonly create_time: Date;
     
 
 

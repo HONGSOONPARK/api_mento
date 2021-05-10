@@ -2,7 +2,7 @@ import { IsByteLength, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class NoticeDto{
     @IsNumber()
-    readonly no: number;
+    readonly seq: number;
 
     @IsOptional()
     @IsString()
@@ -10,7 +10,7 @@ export class NoticeDto{
 
     @IsOptional()
     @IsNumber()
-    readonly earningLate: number;
+    readonly earning_late: number;
 
     @IsOptional()
     @IsNumber()
@@ -18,15 +18,15 @@ export class NoticeDto{
 
     @IsOptional()
     @IsString()
-    readonly startDate: string;
+    readonly start_date: string;
 
     @IsOptional()
     @IsString()
-    readonly endDate: string;
+    readonly end_date: string;
 
     @IsOptional()
     @IsString()
-    readonly updateDate: Date;
+    readonly cereate_time: Date;
 
 }
 

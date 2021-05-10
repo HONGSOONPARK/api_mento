@@ -2,22 +2,22 @@ import { IsByteLength, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class PushInfoDto{
     @IsString()
-    readonly fcmToken: string;
+    readonly fcm_token: string;
 
     @IsOptional()
     @IsString()
-    readonly accountId: string;
+    readonly id: string;
 
     @IsOptional()
     @IsString()
-    readonly pushYn: string;
+    readonly push_yn: string;
 
     @IsOptional()
     @IsString()
-    readonly updateDate: Date;
+    readonly create_time: Date;
 
     toString(): string{
-        return this.fcmToken+"|"+this.accountId+"|"+this.pushYn+"|"+this.updateDate;
+        return this.fcm_token+"|"+this.id+"|"+this.push_yn+"|"+this.create_time;
     }
 
 }

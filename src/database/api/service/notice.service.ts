@@ -19,9 +19,9 @@ export class NoticeService {
       return this.noticeInfoRepository.find();
     }
 
-    async findTodayNotice(no: number): Promise<NoticeDto> {
-      const noticeInfo = await this.noticeInfoRepository.findOne({no:no});
-      console.log('findTodayNotice : find ::'+no+ " :: result ==> {"+noticeInfo.no + "}");
+    async findTodayNotice(seq: number): Promise<NoticeDto> {
+      const noticeInfo = await this.noticeInfoRepository.findOne({seq:seq});
+      console.log('findTodayNotice : find ::'+seq+ " :: result ==> {"+noticeInfo.seq + "}");
       return noticeInfo;
     }
 

@@ -2,7 +2,7 @@ import { IsByteLength, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class BannerDto{
     @IsNumber()
-    readonly no: number;
+    readonly seq: number;
 
     @IsOptional()
     @IsString()
@@ -14,7 +14,7 @@ export class BannerDto{
 
     @IsOptional()
     @IsString()
-    readonly codeName: string;
+    readonly code_name: string;
 
     @IsOptional()
     @IsString()
@@ -22,23 +22,23 @@ export class BannerDto{
 
     @IsOptional()
     @IsString()
-    readonly urlPath: string;
+    readonly url_path: string;
 
     @IsOptional()
     @IsString()
-    readonly useYn: string;
+    readonly use_yn: string;
 
     @IsOptional()
     @IsString()
-    readonly startDate: string;
+    readonly start_date: string;
 
     @IsOptional()
     @IsString()
-    readonly endDate: string;
+    readonly end_date: string;
 
     @IsOptional()
     @IsString()
-    readonly updateDate: Date;
+    readonly create_time: Date;
 
 }
 

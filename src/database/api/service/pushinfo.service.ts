@@ -20,8 +20,8 @@ export class PushInfoService {
       }
 
       async findFcmToken(token: string): Promise<PushInfoDto> {
-        const pushInfo = await this.pushInfoRepository.findOne({fcmToken:token});
-        console.log('findFcmToken : find ::'+token+ " :: result ==> {"+pushInfo.fcmToken + "}");
+        const pushInfo = await this.pushInfoRepository.findOne({fcm_token:token});
+        console.log('findFcmToken : find ::'+token+ " :: result ==> {"+pushInfo.fcm_token + "}");
         return pushInfo;
       }
       
@@ -33,7 +33,7 @@ export class PushInfoService {
 
       deleteOne(token:string){
         this.findFcmToken(token);
-        this.pushInfo = this.pushInfo.filter(pushInfo => pushInfo.fcmToken !== token);
+        this.pushInfo = this.pushInfo.filter(pushInfo => pushInfo.fcm_token !== token);
       }
 
 }

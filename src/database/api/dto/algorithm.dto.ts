@@ -2,7 +2,7 @@ import { IsByteLength, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class AlgorithmDto{
     @IsNumber()
-    readonly no: number;
+    readonly seq: number;
 
     @IsOptional()
     @IsString()
@@ -10,7 +10,7 @@ export class AlgorithmDto{
 
     @IsOptional()
     @IsString()
-    readonly codeName: string;
+    readonly code_name: string;
 
     @IsOptional()
     @IsString()
@@ -18,23 +18,23 @@ export class AlgorithmDto{
 
     @IsOptional()
     @IsNumber()
-    readonly earningLate: number;
+    readonly earning_late: number;
 
     @IsOptional()
     @IsNumber()
-    readonly earningAverage: number;
+    readonly earning_average: number;
 
     @IsOptional()
     @IsNumber()
-    readonly standardDeviation: number;
+    readonly standard_deviation: number;
 
     @IsOptional()
     @IsString()
-    readonly holdingPeriod: string;
+    readonly holding_period: string;
 
     @IsOptional()
     @IsString()
-    readonly updateDate: Date;
+    readonly create_time: Date;
 
 }
 

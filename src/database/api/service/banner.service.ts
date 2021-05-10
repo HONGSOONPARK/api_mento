@@ -19,9 +19,9 @@ export class BannerService {
       return this.bannerInfoRepository.find();
     }
 
-    async findTodayBanner(no: number): Promise<BannerDto> {
-      const bannerInfo = await this.bannerInfoRepository.findOne({no:no});
-      console.log('findTodayBanner : find ::'+no+ " :: result ==> {"+bannerInfo.no + "}");
+    async findTodayBanner(seq: number): Promise<BannerDto> {
+      const bannerInfo = await this.bannerInfoRepository.findOne({seq:seq});
+      console.log('findTodayBanner : find ::'+seq+ " :: result ==> {"+bannerInfo.seq + "}");
       return bannerInfo;
     }
 
