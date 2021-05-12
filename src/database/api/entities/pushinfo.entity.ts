@@ -11,6 +11,9 @@ export class PushInfo {
     @Column({ length: 1, nullable: false, default: 'N', comment: "푸시 수신여부" })
     push_yn: string;
 
+    @Column({ length: 20, nullable: true, comment: "등록 기기 os" })
+    os: string;
+
     @Column({ type: 'timestamp', nullable: false, default: () => "CURRENT_TIMESTAMP", comment: "생성일"})
     create_time: Date;
 }

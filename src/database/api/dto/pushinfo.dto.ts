@@ -14,10 +14,14 @@ export class PushInfoDto{
 
     @IsOptional()
     @IsString()
+    readonly os: string;
+
+    @IsOptional()
+    @IsString()
     readonly create_time: Date;
 
     toString(): string{
-        return this.fcm_token+"|"+this.user_seq+"|"+this.push_yn+"|"+this.create_time;
+        return this.fcm_token+"|"+this.user_seq+"|"+this.push_yn+"|"+this.os+"|"+this.create_time;
     }
 
 }
