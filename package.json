@@ -31,7 +31,9 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3",
-    "typeorm": "^0.2.31"
+    "typeorm": "^0.2.31",
+    "firebase-admin": "^9.9.0",
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.1",
@@ -71,5 +73,5 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }  
+  }
 }
