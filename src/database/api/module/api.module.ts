@@ -10,6 +10,10 @@ import { PushInfo } from '../entities/pushinfo.entity';
 import { AlgorithmService } from '../service/algorithm.service';
 import { Algorithm } from '../entities/algorithm.entity';
 import { Notice } from '../entities/notice.entity';
+
+import { AgPortfolio } from '../entities/ag_portfolio.entity';
+import { AgPortfolioService } from '../service/ag_portfolio.service';
+
 import { Banner } from '../entities/banner.entity';
 import { BannerService } from '../service/banner.service';
 import { NoticeService } from '../service/notice.service';
@@ -21,9 +25,9 @@ import * as firebase_sdkJson from '../../../../firebase_sdk.json';
 import firebaseAdmin from 'firebase-admin';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([AppInfo, PushInfo, Algorithm, Banner, Notice])],
+  imports: [TypeOrmModule.forFeature([AppInfo, PushInfo, Algorithm, Banner, Notice, AgPortfolio])],
   controllers: [ApiController, OauthController],
-  providers: [ApiService,AppInfoService, PushInfoService, AlgorithmService, BannerService, NoticeService, OauthService ]
+  providers: [ApiService,AppInfoService, PushInfoService, AlgorithmService, BannerService, NoticeService, AgPortfolioService, OauthService ]
 })
 
 

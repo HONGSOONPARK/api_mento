@@ -11,8 +11,10 @@ import { AppInfoService } from '../service/appinfo.service';
 import { BannerService } from '../service/banner.service';
 import { NoticeService } from '../service/notice.service';
 import { PushInfoService } from '../service/pushinfo.service';
+import { AgPortfolioService } from '../service/ag_portfolio.service';
 
 import { Response, ResponseMessage } from '../utils/response.utils';
+import { AgPortfolioDto } from '../dto/ag_portfolio.dto';
 
 @Controller('api')
 export class ApiController {
@@ -23,7 +25,8 @@ export class ApiController {
         private readonly pushInfoService: PushInfoService,
         private readonly algorithmService: AlgorithmService,
         private readonly bannerService: BannerService,
-        private readonly noticeService: NoticeService
+        private readonly noticeService: NoticeService,
+        private readonly agPortfolioService: AgPortfolioService
         ){}
 
     @Get()
@@ -166,5 +169,17 @@ export class ApiController {
         Logger.error(err);
       }
     }
+
+  // 포트폴리오
+  @Get('/portfolio/a')
+  async agPortfolioAll(): Promise<Response> {
+    console.log('agPortfolioAll');
+      try{
+        const agPortfolio:AgPortfolioDto[] = await this.agPortfolioService.findAll();  
+        return new ResponseMessage().success().body(agPortfolio).build();
+      } catch (err){
+        Logger.error(err);
+      }
+  }
 
 }
