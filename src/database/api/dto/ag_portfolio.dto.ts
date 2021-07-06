@@ -2,6 +2,7 @@ import { IsByteLength, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class AgPortfolioDto{
     @IsNumber()
+    @IsOptional()
     readonly id: number;
 
     @IsNumber()
@@ -51,6 +52,14 @@ export class AgPortfolioDto{
     @IsOptional()
     @IsNumber()
     readonly rate: number;
+
+    @IsOptional()
+    @IsString()
+    readonly column: string;
+
+    @IsOptional()
+    @IsString()
+    readonly orderby: string;
 
 }
 
